@@ -54,3 +54,4 @@ function scheduleWhatsApp(button) {
     // Abre o WhatsApp
     window.open(whatsappLink, '_blank');
 }
+
