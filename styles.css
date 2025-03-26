@@ -34,10 +34,24 @@
             z-index: 1000;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espaço entre a imagem e o texto */
+        }
+        
+        .logo-container img {
+            height: 100px; /* Ajuste a altura conforme necessário */
+            width: auto;
+            object-fit: contain;
+            max-width: 150px; /* Largura máxima para evitar que fique muito grande */
+        }
+        
+        .logo-container .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--cor-primaria);
+            color: var(--cor-primaria); /* Use sua cor de marca */
+            letter-spacing: 1px;
         }
 
         .menu-toggle {
@@ -399,6 +413,27 @@
 .btn-secundario {
     background-color: var(--cor-secundaria);
     color: white;
+    /* Animação de Pulsação */
+    animation: pulse 2s infinite;
+    
+    /* Efeito de Brilho */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Keyframes para Pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 }
 
 .btn-secundario:hover {
@@ -415,7 +450,12 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    
+    animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
 }
 
 @media screen and (max-width: 768px) {
@@ -529,6 +569,27 @@
 .btn-primario {
     background-color: var(--cor-primaria);
     color: white;
+    /* Animação de Pulsação */
+    animation: pulse 2s infinite;
+    
+    /* Efeito de Brilho */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Keyframes para Pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 }
 
 .btn-primario:hover {
