@@ -232,6 +232,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    justify-content: center;
+}
+
+/* Quando houver 7 cards, centraliza o último */
+@media (min-width: 1024px) {
+    .services-grid:has(.service-card:nth-child(7)) {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .services-grid:has(.service-card:nth-child(7)) .service-card:last-child {
+        grid-column: 2 / span 1;
+        justify-self: center;
+        max-width: 100%;
+    }
 }
 
 .service-card {

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function scheduleWhatsApp(button) {
     // Número de WhatsApp (substitua pelo seu número)
-    const whatsappNumber = '5534988077628'; // Formato internacional sem o '+' 
+    const whatsappNumber = '5534992383282'; // Formato internacional sem o '+' 
     
     // Recupera o nome do serviço do atributo data
     const serviceName = button.getAttribute('data-service');
